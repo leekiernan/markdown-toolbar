@@ -1,0 +1,12 @@
+// ---------------------------------------------------------------------------
+// Imports
+@import "normalize";
+@import "base";
+
+/* -------------------------------------------------------------------------*/
+/* Layout */
+
+.container {
+  @include container;
+  @include susy-grid-background;
+}

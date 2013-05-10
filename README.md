@@ -1,32 +1,12 @@
 #Project 101
-## Folder Structure
-+ **_/** - assets folder
-	+ **css/**
-		+ **scss/**
-			+ config/
-			+ libs/
-			+ partials/
-			+ styles.scss
-		+ **styles.css**
-	+ **fonts/**
-		+ fontName/
-		+ fontName/
-	+ **img/** - all images, graphics
-		+ photos/
-	+ **js/**
-		+ libs/
-		+ modules/
-		main.js
-	+ **partials/** - snippets of html used across pages
-+ **.gitignore** - a thousand hells be visited upon you if you forget this before *git init && git add . && git commit -m 'inital commit'*
-+ **.htaccess** - h5bp default for many optimisations
-+ **config.rb** - see scss & compass section
-+ **robots.txt**
-+ **XXXX.php** - page files
-+ **_header.php**
-+ **_footer.php**
+	- Clone this repository
+	- Remove .git folder
+	- Initialise with repository for project at hand.
 
-*starting with the [HTML5Boilerplate](http://html5boilerplate.com/) will give you a lot of this, although you'll want to strip out and customise it*
+		compass watch .
+
+		coffee -j _/script/js/main.js -cw _/script/js/coffee/*.coffee
+
 
 # [GIT](http://git-scm.com)
 **use it** and try not to be a dick, "did some shiz" while accurate, is a poor commit message
@@ -55,7 +35,7 @@ all javascript should be concatenated into one file (including jQuery or other l
 # Speed (AKA [gotta go fast](http://www.bestguywins.com/freegames/ultimate-sonic/sonic.gif))
 
 ###Make fewer http requests
-this means as few **scripts**, **css**, **images** as possible up front.
+this means as few **scripts**, **css**, **images** as possible up front.  Contatinate
 
 ###Images
 [Images are big. Really big. You just won't believe how vastly, hugely, mindbogglingly big they are.](http://static.guim.co.uk/sys-images/Books/Pix/pictures/2009/10/9/1255099273423/Hitchhikers-Guide-to-the--001.jpg)
