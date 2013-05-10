@@ -3,9 +3,9 @@
 	- Remove .git folder
 	- Initialise with repository for project at hand.
 
-		compass watch .
 
-		coffee -j _/script/js/main.js -cw _/script/js/coffee/*.coffee
+				compass watch .
+				coffee -j _/script/js/main.js -cw _/script/js/coffee/*.coffee
 
 
 # [GIT](http://git-scm.com)
