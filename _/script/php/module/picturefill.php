@@ -52,37 +52,3 @@ function pictureFillImage($config){
 
   return $image;
 }
-
-function filterImages($src){
-  return (preg_match("/\.(jpg|jpeg|png|gif|svg)$/", $src))
-          ? (strpos($src, '@2x'))
-            ? false
-            : true
-          :false;
-}
-
-function load5Images(){
-  $imageMarkup = "";
-  $imageCount=1;
-  $segments = explode('/',$_SERVER['REQUEST_URI']);
-  array_shift($segments);
-  $segments[0] = (!$segments[0] || !preg_match("/^[\w-]+$/", $segments[0]) ) ? "index" : $segments[0];
-  $imageFolder = "/_/img/photos/".$segments[0]."/";
-
-  if(is_dir($_SERVER['DOCUMENT_ROOT'] . $imageFolder)){
-    $filteredImages = array_filter(scandir($_SERVER['DOCUMENT_ROOT'] . $imageFolder), "filterImages");
-    foreach($filteredImages as $v) {
-      if($imageCount <= 5){
-        $showAt = ($imageCount === 1 || $imageCount === 5)
-          ? "53.75em"
-          : (($imageCount>1 && $imageCount<5)
-            ? "27.5em"
-            : "0em");
-        $imageMarkup .= "<li>" . pictureFillImage(array('src' => $imageFolder . $v, 'alt' => '', 'showAt' => $showAt, 'link'=>'/gallery')) . "</li>\n";
-        $imageCount++;
-      }
-    }
-  }
-
-  return $imageMarkup;
-}
