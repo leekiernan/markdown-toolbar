@@ -1,0 +1,32 @@
+/*
+	Colours
+*/
+$clr-primary: rgb( 255,255,255 ); // White
+$clr-secondary: rgb( 101,84,77 ); // Dark Brown.  Footer and text on tertiary
+$clr-tertiary: rgb( 236,228,225 ); // Light Brown
+$clr-quaternary: rgb( 90,123,124 ); // Green.  Buttons
+$clr-quinary: rgb( 71,5,3 ); // Reddish. text
+$clr-senary: rgb( 196,182,177 ); // Light brown for text
+// $clr-septenary: rgb( 255,255,255 );
+// $clr-octonary: rgb( 255,255,255 );
+// $clr-nonary: rgb( 255,255,255 );
+// $clr-denary: rgb( 255,255,255 );
+
+
+/*
+	Fonts
+*/
+$fnt-primary: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$fnt-secondary: Georgia, serif;
+//$font-tertiary: Verdana;
+
+
+/*
+	Basic Grid
+*/
+$total-columns  : 12;
+$column-width   : 4em;
+$gutter-width   : 1em;
+$grid-padding   : $gutter-width;
+
+$show-grid-backgrounds  : true;
