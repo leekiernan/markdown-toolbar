@@ -1,5 +1,5 @@
-<?php include("_/html/_head.php"); ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . "/_/extracts/_head.php"; ?>
 
 <p>Hello world! This is HTML5 Boilerplate.</p>
 
-<?php include("_/html/_foot.php"); ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . "/_/extracts/_foot.php"; ?>
