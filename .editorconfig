@@ -1,0 +1,8 @@
+# Download a plugin for your text editor at http://editorconfig.org/#download
+
+root = true
+
+[*]
+indent_style = tab
+indent_size = 4
+end_of_line = LF
