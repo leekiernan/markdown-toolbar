@@ -1,4 +1,4 @@
-        <script src="/_/script/js/main.min.js"></script>
+        <script src="/_/script/js/main.min.js" async defer></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.
         <script>
