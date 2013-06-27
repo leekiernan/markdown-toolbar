@@ -11,5 +11,24 @@
 
 # TECHNOLOGY COLOPHON
 
-    HTML5, CSS3
+    HTML5, CSS3, Javascript
     Normalize.css, jQuery, Modernizr
+    Grunt, SASS(SCSS), Compass
+
+
+
+
+                     ?MM=
+                 =MMMMMMMMMM~
+                :8MMMMMMMMMMO,
+                    7MMMM?
+       DM8                          D+
+   :MMMMMMMM8,                  :NMMM+
+ ,MMMMMMMMMMMMD              8MMMMMMM+
+     ,MMMMN              7MMMMMMMMMMM+
+                     =MMMMMMMMMMMMMM~
+                  ?MMMMMMMMMMMMMM
+               ~MMMMMMMMMMMMM~
+               :MMMMMMMMM8,
+               :MMMMMM+
+               :MM$             websir
