@@ -37,7 +37,7 @@ module.exports = function(grunt) {
 			}
 		},
 		clean: ['_/script/js/temp'],
-		regarde: {
+		watch: {
 			js: {
 				files: ['_/script/js/*/*.js', '_/script/js/coffee/*.coffee'],
 				tasks: ['coffee','concat','uglify','clean'],
@@ -53,7 +53,7 @@ module.exports = function(grunt) {
 
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-compass');
-	grunt.loadNpmTasks('grunt-regarde');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-coffee');
