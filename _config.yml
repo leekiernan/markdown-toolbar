@@ -1,0 +1,6 @@
+name: This is a test
+markdown: redcarpet
+markdown_ext: markdown,mkd,mkdn,md
+pygments: false
+include: ['.htaccess']
+exclude: ['node_modules', 'config.rb', 'package.json', 'README.md', '_assets', 'Gruntfile.js']

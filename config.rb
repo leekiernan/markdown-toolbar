@@ -5,9 +5,9 @@ require 'susy'
 # Set this to the root of your project when deployed:
 http_path = "/"
 css_dir = "_/css"
-sass_dir = "_/css/scss"
+sass_dir = "_assets/scss"
 images_dir = "_/img"
-javascripts_dir = "_/script/js"
+javascripts_dir = "_/js"
 fonts_dir = "_/fonts"
 
 # You can select your preferred output style here (can be overridden via the command line):

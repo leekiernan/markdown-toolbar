@@ -1,0 +1,28 @@
+---
+layout: default
+title: Everywhere
+---
+<section id="home">
+  <div class="container">
+
+    <div class="image"><img src="/img/me.jpg" alt="" /></div>
+
+    <article>
+      <p>Hello</p>
+    </article>
+  </div>
+</section>
+
+{% for post in site.posts %}
+<section id="{{post.section}}" data-speed="{{post.speed}}" data-offsetY="{{post.offset}}" >
+  <header>
+    <button><i data-icon="{{post.icon}}" class="empty"></i></button>
+  </header>
+
+  <div class="container">
+    <article>
+      {{ post.content }}
+    </article>
+  </div>
+</section>
+{% endfor %}

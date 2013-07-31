@@ -1,3 +1,12 @@
+# README for project base: Jekyll edition.
+
+This ia a template, some of which can be generated with 'jekyll new'
+
+* _assets for precompiled.  This does not need to be in the end website.
+* Current set up will render all _posts into index.html for single page website.
+
+## <Insert style guide>
+
 #Project 101
 	- Clone this repository
 	- Remove .git folder
@@ -13,7 +22,7 @@ Grunt is a command line task runner. These "tasks" are pretty wide ranging; comp
 Grunt is used (by default) in this particular project, for watching files for changes and then performing compilation, concat and minification of js, scss, coffeescript.
 
 when you have cloned a project and want to compile + watch for file changes:
-		
+
 		cd /path/to/repo
 		npm install
 		grunt
@@ -44,7 +53,7 @@ whichever you prefer (but normalize in included) just don't [switch halfway thro
 # Javascript
 all javascript should be concatenated into one file (including jQuery or other libraries) for production
 
-# Speed 
+# Speed
 (AKA [gotta go fast](http://www.bestguywins.com/freegames/ultimate-sonic/sonic.gif))
 
 ###Make as few http requests as possible
@@ -57,9 +66,9 @@ this means that you probably dont want to serve these giant things to everyone, 
 There isn't yet a particularly good solution to this problem but try [picturefill](https://github.com/scottjehl/picturefill) as a stopgap.
 
 ###Dev Tools Network Tab
-most browsers include a network tab that will give information about how fast parts of the page load. 
+most browsers include a network tab that will give information about how fast parts of the page load.
 
-Most importantly it gives DOMContentLoaded and the javascript onload events. 
+Most importantly it gives DOMContentLoaded and the javascript onload events.
 
 
 ###[Page speed](https://developers.google.com/speed/pagespeed/insights_extensions) (Chrome, Firefox)
