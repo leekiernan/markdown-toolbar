@@ -57,3 +57,7 @@ dwsync.xml
 # Node Packages #
 ################################
 node_modules
+
+# Jekyll Site #
+################################
+_site/
