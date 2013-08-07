@@ -44,7 +44,7 @@ module.exports = function(grunt) {
 				spawn: true
 			},
 			css: {
-				files: ['_/css/scss/*/*.scss','_/css/scss/*.scss'],
+        files: ['_assets/scss/*/*.scss','_assets/scss/*.scss'],
 				tasks: ['compass'],
 				spawn: true
 			}
