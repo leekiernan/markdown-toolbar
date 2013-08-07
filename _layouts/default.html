@@ -4,90 +4,77 @@
 <!--[if IE 8 ]><html class="ie ie8" lang="en-US"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!-->
 <html lang="en-US"><!--<![endif]-->
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <meta charset="UTF-8">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>G.O.A.T | {{ page.title }}</title>
+    <title>John Burton-Race | {{ page.title }}</title>
 
-  <link rel="stylesheet" href="/_/screen.css">
+    <link rel="stylesheet" href="/_/screen.css">
 
-  <!--[if lt IE 9]>
-  <script>
-  document.createElement("header");
-  document.createElement("nav");
-  document.createElement("section");
-  document.createElement("article");
-  document.createElement("aside");
-  document.createElement("footer");
-  </script>
+    <!--[if lt IE 9]>
+    <script>
+      document.createElement("header");
+      document.createElement("nav");
+      document.createElement("section");
+      document.createElement("article");
+      document.createElement("aside");
+      document.createElement("footer");
+    </script>
 
-  <script src="/_/js/selectivizr.min.js"></script>
-  <script src="/_/js/respond.min.js"></script>
+    <script src="/_/js/selectivizr.min.js"></script>
+    <script src="/_/js/respond.min.js"></script>
+    <![endif]-->
 
-  <![endif]-->
+    <script src="/_/js/modernizr-2.6.2.min.js"></script>
+  </head>
 
-  <script src="/_/js/modernizr-2.6.2.min.js"></script>
+  <body>
+    <header>
+      
 
-</head>
+      <a class="nav-toggle" id="nav-toggle" href="#main-navigation" data-scroll-to="0">=</a>
+    </header>
 
-<body>
-  <header>
-    <div>
-      <span class="">Lee Kiernan</span>
-    </div>
-
-    <a href="#sidr" id="menutrigger" class="empty" data-icon="="></a>
-  </header>
-<!--[if lt IE 9]>
-<style>p.chromeframe { position:absolute; width:100%;; top:2em; display:block;clear:both;background:whitesmoke;text-align:center;color:black;} .chromeframe a { color:black;font-weight:bold; }</style>
-<style>section#home div.image { display:none; } </style>
-<p class="chromeframe">
-  Your browser is <strong>ancient</strong>. <a href="http://browsehappy.com/">I cannot guarantee excellence</a> but <a href="http://www.google.com/chromeframe/?redirect=true">consider Google Chrome Frame</a> to improve your experience.</p>
-<![endif]-->
+    <!--[if lt IE 9]>
+    <style>p.chromeframe { position:absolute; width:100%;; top:2em; display:block;clear:both;background:whitesmoke;text-align:center;color:black;} .chromeframe a { color:black;font-weight:bold; }</style>
+    <style>section#home div.image { display:none; } </style>
+    <p class="chromeframe">
+    Your browser is <strong>ancient</strong>. <a href="http://browsehappy.com/">I cannot guarantee excellence</a> but <a href="http://www.google.com/chromeframe/?redirect=true">consider Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
 
 
-  <nav id="sidr" class="hidden">
-    <h3>Navigation</h3>
-    <a href="#" class="navclose empty" data-icon="X"></a>
+    {{ content }}
 
+
+    <footer>
+    <nav role=navigation id="main-navigation" class="main-nav">
     <ul>
-      <li><a href="#home" data-icon="a"> Home </a></li>
-      <li><a href="#about" data-icon="i"> About Me </a></li>
-      <li><a href="#personalinfo" data-icon="k"> Personal Information </a></li>
-      <li><a href="#skills" data-icon="g"> Skills </a></li>
-      <li><a href="#education" data-icon="h"> Education </a></li>
-      <li><a href="#employment" data-icon="i"> Employment </a></li>
-      <li><a href="#portfolio" data-icon="j"> Portfolio </a></li>
-      <li><a href="#contact" data-icon="l"> Contact me </a></li>
-      <li><a href="#summary" data-icon="q"> Summary </a></li>
+      <li><a href="/">Home</a></li>
+      <li><a href="/">My Life</a></li>
+      <li><a href="">Recipes</a></li>
+      <li><a href="/">Consulting</a></li>
+      <li><a href="/">Associations</a></li>
+      <li><a href="/">Contact</a></li>
     </ul>
-  </nav>
+    </nav>
 
+    <a id="author" hred="http://www.websir.co.uk"><img src="" alt="" /></a>
+   </footer>
 
-  {{ content }}
+    <script src="/_/js/main.min.js" async defer></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+      ga('create', 'UA-41412289-1', 'leekiernan.co.uk');
+      ga('send', 'pageview');
 
-  <footer>
-    <article>
-      <p></p>
-      <p>&copy; 2013 <em>Lee Kiernan</em>.</p>
-    </article>
-  </footer>
-
-  <script src="/_/js/main.min.js" async defer></script>
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-41412289-1', 'leekiernan.co.uk');
-    ga('send', 'pageview');
-
-  </script>
-</body>
+    </script>
+  </body>
 </html>

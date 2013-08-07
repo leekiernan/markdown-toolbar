@@ -1,6 +1,6 @@
-name: This is a test
+name: John Burton-Race
 markdown: redcarpet
 markdown_ext: markdown,mkd,mkdn,md
 pygments: false
-include: ['.htaccess']
+include: ['.htaccess', '_']
 exclude: ['node_modules', 'config.rb', 'package.json', 'README.md', '_assets', 'Gruntfile.js']

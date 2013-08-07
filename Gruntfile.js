@@ -7,18 +7,18 @@ module.exports = function(grunt) {
 		concat: {
 			build: {
 				src: [
-				'_/script/js/vendor/jquery-1.10.0.min.js',
-				'_/script/js/vendor/picturefill.js',
-				'_/script/js/module/plugins.js',
-				'_/script/js/module/main.js'
+				'_assets/js/vendor/jquery-1.10.0.min.js',
+				'_assets/js/vendor/picturefill.js',
+				'_assets/js/vendor/responsive-nav.js',
+				'_assets/js/module/*.js'
 				],
-				dest: '_/script/js/temp/main.js'
+				dest: '_assets/js/temp/main.js'
 			}
 		},
 		coffee: {
 			compile: {
 				files: {
-					'_/script/js/temp/coffee.js': ['_/script/js/coffee/*.coffee'] // compile and concat into single file
+					'_assets/js/temp/coffee.js': ['_assets/js/coffee/*.coffee'] // compile and concat into single file
 				}
 			}
 		},
@@ -32,14 +32,14 @@ module.exports = function(grunt) {
 		uglify: {
 			my_target: {
 				files: {
-					'_/script/js/main.min.js': ['_/script/js/temp/main.js', '_/script/js/temp/coffee.js']
+					'_/js/main.min.js': ['_assets/js/temp/main.js', '_assets/js/temp/coffee.js']
 				}
 			}
 		},
-		clean: ['_/script/js/temp'],
+		clean: ['_assets/js/temp'],
 		watch: {
 			js: {
-				files: ['_/script/js/*/*.js', '_/script/js/coffee/*.coffee'],
+				files: ['_assets/js/*/*.js', '_assets/js/coffee/*.coffee'],
 				tasks: ['coffee','concat','uglify','clean'],
 				spawn: true
 			},
@@ -51,19 +51,18 @@ module.exports = function(grunt) {
 		}
 	});
 
-	grunt.loadNpmTasks('grunt-contrib-concat');
-	grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-contrib-uglify');
-	grunt.loadNpmTasks('grunt-contrib-clean');
-	grunt.loadNpmTasks('grunt-contrib-coffee');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-coffee');
 
-	grunt.registerTask('default', [
-		'coffee',
-		'concat',
-		'uglify',
-		'compass',
-		'clean',
-		'regarde'
-		]);
+  grunt.registerTask('default', [
+    'coffee',
+    'concat',
+    'uglify',
+    'compass',
+    'clean'
+  ]);
 };
