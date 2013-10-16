@@ -3,11 +3,11 @@ require 'susy'
 
 # Set this to the root of your project when deployed:
 http_path = "/"
-css_dir = "_/css"
-sass_dir = "_assets/scss"
-images_dir = "_/img"
-javascripts_dir = "_/js"
-fonts_dir = "_/fonts"
+css_dir = "assets/"
+sass_dir = "assets/_scss"
+images_dir = "assets/img"
+javascripts_dir = "assets/js"
+fonts_dir = "assets/fonts"
 
 # Dev settings.
 output_style = :expanded # or :nested or :compact or :compressed

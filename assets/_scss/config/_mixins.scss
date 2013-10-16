@@ -1,0 +1,33 @@
+/*
+	REM size fallback
+	$property 	css property (font-size, line-height)
+	$value 		int/float representing multiple of base value (16px default);
+*/
+@mixin pixelRem($property, $value){
+  #{$property}: $value * 16px; /* fallback */
+  #{$property}: #{$value + 'rem'};
+}
+
+/*
+	Image replacement
+*/
+@mixin ir {
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+}
+
+%container {
+  @include container;
+  overflow:hidden;
+}

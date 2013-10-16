@@ -1,0 +1,12 @@
+<div>
+  <ul id="images" data-count="{{ page.images.size }}">
+    {% for image in page.images %}
+      <li>
+        <img
+          src="/assets/img/{{ image.folder }}/preview/{{ image.path }}"
+          rel="/assets/img/{{ image.folder }}/{{ image.path }}" />
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+

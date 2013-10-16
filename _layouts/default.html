@@ -1,70 +1,95 @@
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-    <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-      <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-        <head>
-          <meta charset="utf-8">
-          <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-          <meta name="viewport" content="width=device-width">
-          <meta name="author" content="websir.co.uk">
-          <meta name="description" content="">
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width">
+  <meta name="author" content="websir.co.uk">
 
-          <title>{{ page.title }}</title>
+  <meta name="description" content="">
 
-          <link rel="stylesheet" href="/_/css/screen.css">
+  <title>{{ page.title }}</title>
 
-          <!--[if lt IE 9]>
-          <script>
-            document.createElement("header");
-            document.createElement("nav");
-            document.createElement("section");
-            document.createElement("article");
-            document.createElement("aside");
-            document.createElement("footer");
-          </script>
+  <link rel="stylesheet" href="/assets/screen.css">
 
-          <script src="/_/js/selectivizr.min.js"></script>
-          <script src="/_/js/respond.min.js"></script>
-          <![endif]-->
+    <!--[if lt IE 9]>
+    <script>
+      document.createElement("header");
+      document.createElement("nav");
+      document.createElement("section");
+      document.createElement("article");
+      document.createElement("aside");
+      document.createElement("footer");
+    </script>
 
-          <script src="/_/js/modernizr-2.6.2.min.js"></script>
-        </head>
+    <script src="/assets/js/selectivizr.min.js"></script>
+    <script src="/assets/js/respond.min.js"></script>
+    <![endif]-->
 
-        <body>
-          <header>
+    <script src="/assets/js/modernizr-2.6.2.min.js"></script>
+  </head>
 
-          <a id="nav-toggle" href="#main-navigation" data-scroll-to="0">=</a>
-          </header>
+  <body>
+    <header>
+      <section>
+        <a href="/" class="logo"><img src="/assets/img/logo.svg" alt="" /></a>
+        <a id="nav-toggle" href="#main-navigation">=</a>
+      </section>
+    </header>
 
-          <!--[if lt IE 9]>
-          <style>p.chromeframe { position:absolute; width:100%;; top:2em; display:block;clear:both;background:whitesmoke;text-align:center;color:black;} .chromeframe a { color:black;font-weight:bold; }</style>
-          <style>section#home div.image { display:none; } </style>
-          <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-          <![endif]-->
+    <!--[if lt IE 9]>
+    <style>p.chromeframe { position:absolute; width:100%;; top:2em; display:block;clear:both;background:whitesmoke;text-align:center;color:black;} .chromeframe a { color:black;font-weight:bold; }</style>
+    <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
 
+    <section id="gallery">
+      {% include gallery.html %}
+    </section>
 
-          {{ content }}
+    <section class="page" id="{{ page.id }}">
+      <section id="sliders">
+        {% include sliders.html %}
+      </section>
 
+      <h1>{{ page.heading }}</h1>
+      <h2>{{ page.subheading }}</h2>
 
-          <footer>
-          <nav role=navigation id="main-navigation" class="main-nav">
-          <ul>
-            <li><a href="/"></a></li>
-            <li><a href="/"></a></li>
-            <li><a href=""></a></li>
-            <li><a href="/"></a></li>
-            <li><a href="/"></a></li>
-            <li><a href="/"></a></li>
-          </ul>
-          </nav>
+      <div id="main">
+        {{ content }}
+      </div>
 
-          <a id="author" hred="http://www.websir.co.uk"><img src="" alt="" /></a>
-          </footer>
+      <aside>
+        {% include sidebar.html %}
+      </aside>
+    </section>
 
-          <script src="/_/js/main.min.js" async defer></script>
-          <script>var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']]; (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0]; g.src='//www.google-analytics.com/ga.js'; s.parentNode.insertBefore(g,s)}(document,'script'));</script>
+    <footer>
+      <nav role=navigation id="main-navigation" class="main-nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/food-and-drink">Food &amp; Drink</a></li>
+          <li><a href="/christmas">Christmas</a></li>
+          <li><a href="/rooms">Rooms</a></li>
+          <li><a href="/functions">Functions</a></li>
+          <li><a href="/offers-and-events">Offers &amp; Events</a></li>
+          <li><a href="/around-and-about">Around &amp; About</a></li>
+          <li><a href="/children">Children</a></li>
+          <li><a href="/contact-us">Contact us</a></li>
+        </ul>
+      </nav>
 
-        </body>
-      </html>
+      {% include footer.html %}
+
+      <hr />
+      <a id="author" href="http://www.websir.co.uk"><img src="" alt="" /></a>
+    </footer>
+
+    <script src="/assets/js/main.min.js" async defer></script>
+    <script>var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']]; (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0]; g.src='//www.google-analytics.com/ga.js'; s.parentNode.insertBefore(g,s)}(document,'script'));</script>
+
+  </body>
+  </html>

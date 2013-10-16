@@ -1,0 +1,26 @@
+/* Colours */
+$clr-primary: #E9E5D9; // Cream
+$clr-primary-dark: darken($clr-primary, 15%);
+$clr-secondary: #480001; // Red
+$clr-secondary-dark: darken($clr-secondary, 5%);
+
+
+/* Fonts */
+@include font-face("Icons",
+  font-files( "/assets/fonts/icons.woff",
+    "/assets/fonts/icons.ttf",
+    "/assets/fonts/icons.svg"
+  ), "/assets/fonts/icons.eot" );
+
+$fnt-primary: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$fnt-secondary: Georgia, serif;
+$fnt-tertiary: "Icons";
+
+
+/* Basic Grid */
+$total-columns  : 16;
+$column-width   : 4em;
+$gutter-width   : 1em;
+$grid-padding   : $gutter-width;
+
+$show-grid-backgrounds  : true;

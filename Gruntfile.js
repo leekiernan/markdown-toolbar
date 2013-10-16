@@ -1,24 +1,23 @@
 'use strict';
 module.exports = function(grunt) {
-
 	// Project configuration.
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		concat: {
 			build: {
 				src: [
-				'_assets/js/vendor/jquery-1.10.0.min.js',
-				'_assets/js/vendor/picturefill.js',
-				'_assets/js/vendor/responsive-nav.js',
-				'_assets/js/module/*.js'
+				'assets/_js/vendor/jquery-1.10.0.min.js',
+				'assets/_js/vendor/picturefill.js',
+				'assets/_js/vendor/responsive-nav.js',
+				'assets/_js/module/*.js'
 				],
-				dest: '_assets/js/temp/main.js'
+				dest: 'assets/_js/temp/main.js'
 			}
 		},
 		coffee: {
 			compile: {
 				files: {
-					'_assets/js/temp/coffee.js': ['_assets/js/coffee/*.coffee'] // compile and concat into single file
+					'assets/_js/temp/coffee.js': ['assets/_js/coffee/*.coffee'] // compile and concat into single file
 				}
 			}
 		},
@@ -32,19 +31,19 @@ module.exports = function(grunt) {
 		uglify: {
 			my_target: {
 				files: {
-					'_/js/main.min.js': ['_assets/js/temp/main.js', '_assets/js/temp/coffee.js']
+					'assets/js/main.min.js': ['assets/_js/temp/main.js', 'assets/_js/temp/coffee.js']
 				}
 			}
 		},
-		clean: ['_assets/js/temp'],
+		clean: ['_assets/_js/temp'],
 		watch: {
 			js: {
-				files: ['_assets/js/*/*.js', '_assets/js/coffee/*.coffee'],
+				files: ['assets/_js/*/*.js', 'assets/_js/coffee/*.coffee'],
 				tasks: ['coffee','concat','uglify','clean'],
 				spawn: true
 			},
 			css: {
-        files: ['_assets/scss/*/*.scss','_assets/scss/*.scss'],
+        files: ['assets/_scss/*/*.scss','assets/_scss/*.scss'],
 				tasks: ['compass'],
 				spawn: true
 			}
