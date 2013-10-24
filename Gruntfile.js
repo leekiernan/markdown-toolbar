@@ -31,11 +31,11 @@ module.exports = function(grunt) {
 		uglify: {
 			my_target: {
 				files: {
-					'assets/js/main.min.js': ['assets/_js/temp/main.js', 'assets/_js/temp/coffee.js']
+					'assets/main.min.js': ['assets/_js/temp/main.js', 'assets/_js/temp/coffee.js']
 				}
 			}
 		},
-		clean: ['_assets/_js/temp'],
+		clean: ['assets/_js/temp'],
 		watch: {
 			js: {
 				files: ['assets/_js/*/*.js', 'assets/_js/coffee/*.coffee'],
