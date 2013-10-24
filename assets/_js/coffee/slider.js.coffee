@@ -1,74 +1,70 @@
-class Slider
-  constructor: (element) ->
-    @container = $(element)
-    @elements = @container.find('>div')
-    @counter = 0
-    @active = 0
-    @cycle = true
+class Header
+  constructor: (container, opts) ->
+    opts = { children: "li" } if opts is undefined
+    @container = container
+    @elements = @container.find "> #{ opts.children }"
+    @count = @container.data('count') || @elements.length
+    @elementWidth = parseInt(opts.elementWidth) || @childWidth(@elements.eq(0))
+    @disabled = false
 
-  size: ->
-    @elements.length
+  disable: ->
+    @disabled = @allowed()
 
-  next: ->
-    if @active >= @size() then @active = 0 else @active += 1
-    @changeActive(@elements)
+  allowed: ->
+    !@disabled
 
-  changeActive: (el) ->
-    el.eq(@active).addClass('active').siblings().removeClass('active')
+  childWidth: (element) ->
+    parseInt($(element).width()) + parseInt($(element).css('margin-right'))
 
-  toElement: (n) ->
-    if n then @active = n
-    @changeActive(@elements)
+  slide: ->
+    return false unless @count > 2
 
-  click: (n) ->
-    if n then @active = n
-    @changeActive(@elements)
-    @changeActive(@list)
+    $(@container).animate
+      left: -(@elementWidth)
+    , 1500, ->
+      self = $(this)
 
-  carousel: ->
-    if this.cycle then this.next()
-
-  addNav: ->
-    if @size() > 1
-      @list = $('<ul>').addClass('slider-nav')
-
-      n = @size()
-      while n >= 0
-        @list.append('<li>')
-      @container.append @list
-      @list.find('li').on 'click', (e) ->
-        @click(@list.find('li').index(this))
+      self.children(':first').detach().appendTo( self )
+      self.css({'left':'0' })
 
 
-_target = $('#sliders > div')
-_target.each (e) ->
-  slider = new Slider( _target[e] )
-  setInterval slider.carousel(), 6000
+_gallery = new Header( $('ul#images') )
+doSlide = ->
+  _gallery.slide() if _gallery.allowed()
 
+setInterval ->
+  doSlide()
+, 8000
 
+#
+noLoadImages = false
+_gallery.elements.on 'click', (e) ->
+  return false if noLoadImages
 
+  _gallery.disable()
+  noLoadImages = true
 
+  _src = $(@).find('img').attr('rel')
+  _figure = $('<figure>')
+  _height = $('#gallery > div').height()
 
-_carousel = true
-_target = $('#sliders > div')
+  _figure.append($('<img>', src: _src )).appendTo('#gallery > div')
+  _figure.css
+    position:'relative',
+    zIndex:500
 
-_target.each (e) ->
+  $('#gallery > div ul').css
+    maxHeight: _height
+  $('#gallery > div ul').animate
+    maxHeight: 0
 
-  self = _target.eq(e)
-  _count = self.find('>div').length
+  _figure.on 'click', (e) ->
+    e.preventDefault
+    _gallery.disable()
+    noLoadImages = false
 
-  if _count > 1
-    _list = $('<ul>').addClass('slider-nav')
-    _list.append('<li>') for n in [1.._count]
-    $(self).append _list
-
-$('.slider-nav li').on 'click', (e) ->
-  _carousel = false
-
-  self = $(@)
-  index = self.index()
-
-  self.closest('div')
-  .find('div').eq(index)
-  .addClass('active')
-  .siblings().removeClass('active')
+    @remove()
+    $('#gallery > div ul').animate
+      maxHeight: _height
+    $('#gallery > div ul').css
+      maxHeight: auto
