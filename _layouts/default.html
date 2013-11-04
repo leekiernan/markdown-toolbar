@@ -36,8 +36,6 @@
   <body>
     <header>
       <section>
-        <a href="/" class="logo"><img src="/assets/img/logo.svg" alt="" /></a>
-        <a id="nav-toggle" href="#main-navigation">=</a>
       </section>
     </header>
 
@@ -46,38 +44,19 @@
     <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
     <![endif]-->
 
-    <section id="gallery">
-      {% include gallery.html %}
-    </section>
-
     <section class="page" id="{{ page.id }}">
-      <section id="sliders">
-        {% include sliders.html %}
-      </section>
-
-      <h1>{{ page.heading }}</h1>
-      <h2>{{ page.subheading }}</h2>
 
       <div id="main">
         {{ content }}
       </div>
 
-      <aside>
-        {% include sidebar.html %}
-      </aside>
     </section>
 
     <footer>
       <nav role=navigation id="main-navigation" class="main-nav">
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/christmas.html">Christmas</a></li>
-          <li><a href="/rooms.html">Rooms</a></li>
-          <li><a href="/contact-us.html">Contact us</a></li>
         </ul>
       </nav>
-
-      {% include footer.html %}
 
       <hr />
       <a id="author" href="http://www.websir.co.uk"><img src="" alt="" /></a>
